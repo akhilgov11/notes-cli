@@ -1,0 +1,25 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main  # Рабочий процесс будет запускаться при push в ветку main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Рабочий процесс будет запускаться на Ubuntu
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2  # Клонируем репозиторий
+
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        java-version: '17'  # Устанавливаем Java 17
+
+    - name: Build with Maven
+      run: mvn clean install  # Сборка проекта с помощью Maven
+
+    - name: Run tests
+      run: mvn test  # Запуск тестов
