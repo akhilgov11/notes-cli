@@ -1,6 +1,6 @@
 Notes CLI
 Автор: axilgowo
-GitHub: https://github.com/axilgowo/axilgowo.git
+GitHub: https://github.com/akhilgov11/notes-cli
 
 Описание
 notes-cli — консольное приложение на Java для управления текстовыми заметками. Заметки сохраняются в файл data/notes.csv, поэтому данные не теряются между запусками.
